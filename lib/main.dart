@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/login.dart';
-import 'package:restaurant_app/register.dart';
+import 'package:restaurant_app/login/login.dart';
+import 'package:restaurant_app/login/register.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -69,3 +70,4 @@ class _HomepageState extends State<Homepage> {
     );
   }
 }
+
