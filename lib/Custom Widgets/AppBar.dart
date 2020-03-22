@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:restaurant_app/Favorites/favorite_page.dart';
 import 'package:restaurant_app/Home/homepage.dart';
 import 'package:restaurant_app/Store/chart_page.dart';
