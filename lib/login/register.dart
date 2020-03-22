@@ -1,4 +1,6 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:restaurant_app/login/login.dart';
 
 class Register extends StatelessWidget {
   @override
@@ -8,7 +10,7 @@ class Register extends StatelessWidget {
         body: ListView(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 30),
+              padding: const EdgeInsets.symmetric(vertical: 20),
               child: Text("Create an account",
               textAlign: TextAlign.center,
                 style: TextStyle(
@@ -19,8 +21,9 @@ class Register extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(6.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 6),
               child: Card(
+                elevation: 5.0,
                 child: ListTile(
                   leading: Icon(Icons.perm_identity),
                   title: Text("Username"),
@@ -28,8 +31,9 @@ class Register extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(6.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 6),
               child: Card(
+                elevation: 5.0,
                 child: ListTile(
                   leading: Icon(Icons.mail_outline),
                   title: Text("Email"),
@@ -37,8 +41,9 @@ class Register extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 6),
               child: Card(
+                elevation: 5.0,
                 child: ListTile(
                   leading: Icon(Icons.lock_outline),
                   title: Text("Password"),
@@ -46,11 +51,13 @@ class Register extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(18.0),
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Login()));
+                },
                 textColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 134,vertical: 11),
+                  padding: const EdgeInsets.symmetric(horizontal: 120,vertical: 15),
                   child: const Text(  
                     'Register',
                     style: TextStyle(fontSize: 20),
@@ -59,18 +66,25 @@ class Register extends StatelessWidget {
               ),
             ),
             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 0),
+              child: Divider(
+                color: Colors.red,
+                thickness: sqrt1_2,
+              ),
+            ),
+           Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row( 
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Padding(padding: EdgeInsets.symmetric(horizontal: 50)),
                   CircleAvatar(
                     child: Text("f",style: TextStyle(fontSize: 30,fontWeight:FontWeight.bold),),
                     radius: 27.0,
                   ),
-                  Padding(padding: EdgeInsets.symmetric(horizontal: 20)),
+                  Padding(padding: EdgeInsets.symmetric(horizontal: 15)),
                   CircleAvatar(
                     backgroundColor: Colors.white,
-                    child: Text("G",style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+                    backgroundImage: NetworkImage("https://drive.google.com/uc?id=15IXOkA4NT-CvAhXC9IPP255VHUjOnRwX"),
                     radius: 27.0,
                   ),
                 ],
